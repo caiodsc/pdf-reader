@@ -97,6 +97,8 @@ module PDF
     # lowlevel hash-like access to all objects in the underlying PDF
     attr_reader :objects
 
+    BASEDIR = File.expand_path(File.join(dir, '..'))
+
     # creates a new document reader for the provided PDF.
     #
     # input can be an IO-ish object (StringIO, File, etc) containing a PDF
